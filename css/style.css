@@ -1,0 +1,103 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: 60px;
+}
+
+.c-clock__circle {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 100%;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.c-clock__center {
+    display: block;
+    height: 6px;
+    width: 6px;
+    background-color: #000;
+    border-radius: 100%;
+    z-index: 10;
+}
+
+.c-clock__arrow {
+    display: flex;
+    width: 1px;
+    position: absolute;
+    left: 150px;
+    transform-origin: right 100%;
+}
+
+.c-clock__hour {
+    background-color: red;
+    z-index: 7;
+    height: 80px;  
+    width: 2px;  
+    top: 71px;
+}
+
+.c-clock__minute {
+    background-color: green;
+    z-index: 5;
+    height: 110px;
+    top: 40px;
+}
+
+.c-clock__second {
+    background-color: blue;
+    z-index: 3;
+    opacity: 0.5;
+    height: 145px;
+    top: 5px;
+}
+
+.c-clock__segments {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.c-clock__segments-item {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 150px;
+    background-color: transparent;
+    top: 0;
+    left: 150px;
+    transform-origin: right 100%;   
+}
+.c-clock__segments-item:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 5px;
+    background-color: #000;
+    transform-origin: right 100%;    
+}
+
+.c-time {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    color: gray;
+}
+
+.c-degree {
+    text-align: center;
+    opacity: 0.2;
+}
+
